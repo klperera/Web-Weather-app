@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+
+}
+html{
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    font-size: 62.5%;
+}
