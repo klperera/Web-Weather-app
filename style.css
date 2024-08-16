@@ -90,3 +90,8 @@ body{
 .weather, .error{
     display: none;
 }
+.error{
+    text-align: left;
+    font-size: 2rem;
+    margin: 2rem 0 0 2rem;
+}

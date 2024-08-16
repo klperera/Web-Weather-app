@@ -6,8 +6,15 @@ const weather_display = document.querySelector(".weather");
 const error_display = document.querySelector(".error");
 
 async function checkWeather(city) {
+    weather_display.style.display = "none";
+    error_display.style.display = "none";
     const response = await fetch(apiUrl + `&q=${city}&appid=${apiKey}`);
     if (response.status == 404 ) {
+        error_display.innerHTML = "Invalid city, try again!";
+        error_display.style.display = "block";
+    }
+    else if (response.status == 400){
+        error_display.innerHTML = "Please entre a city!";
         error_display.style.display = "block";
     }
     else{
